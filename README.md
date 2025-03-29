@@ -97,13 +97,19 @@ The app uses **Flutter BLoC** to manage state efficiently.
 ## 📸 Screenshots
 
 1. **Filter Page**  
-   ![Filter Page](screenshots/screenshot-1.png)
+   <p align="center">
+      <img src="screenshots/screenshot-1.png" alt="Filter Page" width="60%">
+   </p>
 
 2. **Results Page**  
-   ![Results Page](screenshots/screenshot-1.png)
+   <p align="center">
+      <img src="screenshots/screenshot-2.png" alt="Results Page" width="45%">
+      <img src="screenshots/screenshot-3.png" alt="Results Page" width="45%">
+   </p>
 
 3. **Cart Page**  
-   ![Cart Page](screenshots/screenshot-1.png)
-
+   <p align="center">
+      <img src="screenshots/screenshot-4.png" alt="Cart Page" width="60%">
+   </p>
 
 
