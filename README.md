@@ -66,7 +66,7 @@ The app uses **Flutter BLoC** to manage state efficiently.
 1. Clone the repository:
    ```sh
    git clone https://github.com/rohits673/kgk_diamonds.git
-   cd diamond-selection-app
+   cd kgk-diamonds
    ```
 
 2. Install dependencies:
