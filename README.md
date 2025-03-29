@@ -2,51 +2,30 @@
 
 A Flutter application that allows users to **filter**, **sort**, **view**, and **manage a persistent cart** of diamonds. This project follows the **Clean Architecture** pattern with **BLoC state management** and **Hive for local storage**.
 
-## Features
-
-### **1. Filter Page**
-- Users can filter diamonds based on:
-  - **Carat Range (From & To)**
-  - **Lab**
-  - **Shape**
-  - **Color**
-  - **Clarity**
-- A **Search** button applies filters and navigates to the **Result Page**.
-
-### **2. Result Page**
-- Displays filtered diamonds in a **ListView**.
-- Sorting options:
-  - **Final Price (Asc/Desc)**
-  - **Carat Weight (Asc/Desc)**
-- Users can **add/remove diamonds** from the cart directly.
-
-### **3. Cart Page**
-- Displays all diamonds **added to the cart**.
-- Features:
-  - **Remove** diamonds from cart.
-  - **Persistent cart storage** (data remains even after app restart).
-  - **Summary:**
-    - Total Carat
-    - Total Price
-    - Average Price
-    - Average Discount
+## ✨ Features
+- Diamond Catalog with Filtering
+- Cart Management with Add/Remove functionality
+- Detailed Diamond Information Modal
+- Theming with `AppTheme`
+- Local Data Storage using Hive (future expansion possible)
+- State Management using BLoC
 
 ## 📂 Project Structure
-The project follows **Clean Architecture** with separate layers:
-
 ```
 lib/
-│── core/                  # Contains common utilities
-│── data/                  # Data Layer (Models & Data Sources)
-│   │── datasource/        # Local (Hive) storage management
-│   │── model/             # Diamond data models
-│── domain/                # Business Logic Layer (Use Cases & Repository Interface)
-│   │── repository/        # Abstract repository contracts
-│   │── usecases/          # Business logic functions
-│── presentation/          # UI Layer (Pages, BLoC, Widgets)
-│   │── bloc/              # BLoC state management
-│   │── pages/             # UI screens (Filter, Results, Cart)
-│── main.dart              # App entry point
+│── core/                 # Core utilities and theme
+│   │── di/               # Dependency Injection (Future-proofing for services)
+│   │── theme/            # App-wide theming and styles
+│── data/                 # Data Layer (Models & Data Sources)
+│   │── datasource/       # Local (Hive) storage management
+│   │── model/            # Diamond data models
+│── domain/               # Business Logic Layer (Use Cases & Repository Interface)
+│   │── repository/       # Abstract repository contracts
+│   │── usecases/         # Business logic functions
+│── presentation/         # UI Layer (Pages, BLoC, Widgets)
+│   │── bloc/             # BLoC state management for app flows
+│   │── pages/            # UI screens (Filter, Results, Cart)
+│── main.dart             # App entry point
 ```
 
 ## 📌 State Management (BLoC)
@@ -76,11 +55,17 @@ The app uses **Flutter BLoC** to manage state efficiently.
 - `hive_service.dart` manages local storage operations.
 - Cart diamonds are **saved in a Hive box** and **reloaded after restart**.
 
+## ♻️ Code Reusability & Architecture
+- The app is designed using **Clean Architecture**, separating concerns across **Data, Domain, and Presentation layers**.
+- **Reusable Widgets** like `DiamondCard` ensure modularity and maintainability.
+- Dependency Injection (`di/`) ensures flexible service management.
+- **BLoC** enables reactive UI updates and predictable state handling.
+
 ## 🛠️ Installation & Setup
 
 1. Clone the repository:
    ```sh
-   git clone <repo_link>
+   git clone https://github.com/rohits673/kgk_diamonds.git
    cd diamond-selection-app
    ```
 
