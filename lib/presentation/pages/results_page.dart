@@ -203,9 +203,12 @@ class _ResultsPageState extends State<ResultsPage> {
                     itemCount: diamonds.length,
                     itemBuilder: (context, index) {
                       final diamond = diamonds[index];
-                      return DiamondCard(
-                          diamond: diamond,
-                          isInCart: state.cartDiamonds.contains(diamond));
+                      return Padding(
+                        padding: const EdgeInsets.only(bottom: 16),
+                        child: DiamondCard(
+                            diamond: diamond,
+                            isInCart: state.cartDiamonds.contains(diamond)),
+                      );
                     },
                   );
                 },
